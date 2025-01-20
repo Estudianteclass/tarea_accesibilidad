@@ -15,20 +15,20 @@
         src="https://www3.gobiernodecanarias.org/educacion/cau_ce/estadisticasweb/scripts/piwik-base.js"></script>
     <script type="text/javascript"
         src="https://www3.gobiernodecanarias.org/educacion/cau_ce/estadisticasweb/scripts/piwik-evagd.js"></script>
-    <script src="https://cdn.tailwindcss.com"></script>
-  
+
+    <link rel="stylesheet" href="src/output.css">
 </head>
 
 <body class="bg-white text-black h-full w-full">
     <header class="w-full bg-pink-700 text-white py-4 static">
-<div class="fixed top-2 left-3 right-0">
-     <label for="fuente" class="font-bold">Tamaño de la fuente</label>
+        <div class="fixed top-2 left-3 right-0">
+            <label for="fuente" class="font-bold">Tamaño de la fuente</label>
             <select name="fuente" id="fuente" class="bg-pink-700">
-                <option value="normal">Normal</option>
-                <option value="grande">Grande</option>
+                <option value="normal" class="bg-white text-pink-700">Normal</option>
+                <option value="grande" class="bg-white text-pink-700">Grande</option>
             </select>
-</div>
-        <h1 class="text-3xl text-center">Bienvenidos</h1>
+        </div>
+        <h1 class="text-3xl text-center font-bold">Bienvenidos</h1>
         <p class="text-2xl text-center">Este es un ejemplo de una página web con problemas de accesibilidad.</p>
         <nav class="flex flex-row max-w-screen space-x-4 h-16 items-center justify-center">
             <a href="" onclick="alert('Inicio');"
@@ -38,7 +38,7 @@
                 Nosotros</a>
             <a href="" onclick="alert('Contacto');"
                 class="bg-white text-pink-700  px-6 py-2 rounded-md font-bold hover:bg-slate-200">Contacto</a>
-           
+
         </nav>
     </header>
 
@@ -46,7 +46,7 @@
 
 
     <main class="grid grid-cols-3 gap-2 w-full h-full">
-       
+
 
     </main>
     <!-- Imagen sin texto alternativo y decorativa pero relevante -->
@@ -59,52 +59,52 @@
 
     <section class="flex flex-row justify-self-center space-x-2 mt-4">
         <div class="flex flex-col">
-            <img src="fotos/macarons.webp" alt="foto de un postre" id="foto1" class="w-48 w-48 rounded-md">
+            <img src="fotos/macarons.webp" alt="foto de un postre" id="foto1" class="w-52 h-52 rounded-md">
             <a href="#" rel="enlace para solicitar informacion adicional" class="font-bold hover:text-slate-800">Leer
                 más</a>
         </div>
 
-        <form class="flex flex-col w-96 h-48 justify-self-center border justify-center rounded-md px-4 space-y-3">
+        <form class="flex flex-col w-96 h-52 justify-self-center border justify-center rounded-md px-4 space-y-3" id="formulario">
             <h1 class="text-2xl text-center">Iniciar sesión</h1>
 
             <div class="place-self-center">
-                <label for="nombre">Nombre</label>
-                <input type="text" name="nombre" placeholder="Nombre" class="ms-6 w-38 rounded-md">
+                <label for="nombre">Nombre:</label>
+                <input type="text" name="nombre" placeholder="tu nombre de usuario" class=" border-b-2 border-pink-700 ms-6 w-38 ">
 
             </div>
             <div class="place-self-center">
                 <label for="correo">Correo:</label>
-                <input type="email" name="correo" placeholder="Correo Electrónico" class="ms-8 w-38 rounded-md">
+                <input type="email" name="correo" placeholder="correo@ejemplo.com" class="ms-8 w-38 border-b-2 border-pink-700">
             </div>
             <div class="place-self-center">
                 <label for="contraseña">Contraseña:</label>
-                <input type="password" name="contraseña" placeholder="Contraseña" class="w-38 rounded-md">
+                <input type="password" name="contraseña" placeholder="Tu contraseña" class="w-38 border-b-2 border-pink-700">
             </div>
 
 
-            <button class="btn bg-red-500  self-center  px-2 rounded-md font-bold">Registrarse</button>
+            <button class="btn bg-pink-700  text-white self-center  px-2 py-2 rounded-md font-bold hover:bg-pink-800">Registrarse</button>
         </form>
 
     </section>
 
     <!-- Formulario sin etiquetas, sin agrupación lógica ni descripciones de errores -->
-    <section class="flex flex-col justify-self-center space-y-2">
-
+    <section class="flex flex-col justify-self-center space-y-2 w-full">
+<!-- Texto con mal contraste de color y tamaño insuficiente -->
         <p class="text-center text-xs">Este texto tiene un contraste bajo y es difícil de leer.</p>
 
         <!-- Elementos interactivos no accesibles para teclado y sin alternativas -->
         <div class="place-self-center mt-2">
             <button onclick="alert('Acción ejecutada');"
-                class="justify-self-center bg-red-400 py-2 px-2 rounded-md font-bold hover:bg-red-500">Haga clic
+                class="justify-self-center bg-pink-700 py-2 px-2 text-white rounded-md font-bold hover:bg-pink-800">Haga clic
                 aquí</button>
         </div>
 
         <!-- Contenido animado sin opción de detener o pausar -->
-        <marquee behavior="scroll" direction="left" id="moving" class="font-bold text-3xl italic mt-4 py-8">Este
+        <marquee behavior="scroll" direction="left" id="moving" class="font-bold text-3xl italic mt-4 py-8 w-full text-white bg-pink-700">Este
             es un texto en movimiento que no se puede pausar.</marquee>
     </section>
 
-    <!-- Texto con mal contraste de color y tamaño insuficiente -->
+    
 
 
 
