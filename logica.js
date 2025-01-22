@@ -15,7 +15,7 @@ movingText.addEventListener('mouseout', (e) => {
 });
 
 let fuente=document.querySelector('select');
-console.log(fuente.value)
+
 
 let formulario=document.getElementById("formulario")
 let imagen=document.getElementById("foto1")

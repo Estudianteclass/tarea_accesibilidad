@@ -16,20 +16,23 @@
     <script type="text/javascript"
         src="https://www3.gobiernodecanarias.org/educacion/cau_ce/estadisticasweb/scripts/piwik-evagd.js"></script>
 
-    <link rel="stylesheet" href="src/output.css">
+    <link rel="stylesheet" href="./src/output.css">
+    
+
 </head>
 
 <body class="bg-white text-black h-full w-full">
     <header class="w-full bg-pink-700 text-white py-4 static">
-        <div class="fixed top-2 left-3 right-0">
+        <div class="relative top-2 left-3 right-0  bg-pink-700 w-64 rounded-md px-2 py-2">
             <label for="fuente" class="font-bold">Tamaño de la fuente</label>
-            <select name="fuente" id="fuente" class="bg-pink-700">
-                <option value="normal" class="bg-white text-pink-700">Normal</option>
-                <option value="grande" class="bg-white text-pink-700">Grande</option>
+            <select name="fuente" id="fuente" class="bg-pink-700 rounded-md">
+                <option value="normal" class="bg-white text-pink-700 rounded-md">Normal</option>
+                <option value="grande" class="bg-white text-pink-700 rounded-md">Grande</option>
+                
             </select>
         </div>
         <h1 class="text-3xl text-center font-bold">Bienvenidos</h1>
-        <p class="text-2xl text-center">Este es un ejemplo de una página web con problemas de accesibilidad.</p>
+        <p class="text-2xl text-center py-2">Este es un ejemplo de una página web con problemas de accesibilidad.</p>
         <nav class="flex flex-row max-w-screen space-x-4 h-16 items-center justify-center">
             <a href="" onclick="alert('Inicio');"
                 class="bg-white text-pink-700 px-6 py-2 font-bold rounded-md hover:bg-slate-200 ">Inicio</a>
@@ -42,83 +45,92 @@
         </nav>
     </header>
 
-    <!-- Lista visual pero no semántica -->
+   
 
 
-    <main class="grid grid-cols-3 gap-2 w-full h-full">
-
-
-    </main>
-    <!-- Imagen sin texto alternativo y decorativa pero relevante -->
+   
+  
 
 
     <!-- Enlace con texto no descriptivo y sin propósito claro -->
 
 
     <!-- Navegación incorrecta sin estructura semántica adecuada -->
-
-    <section class="flex flex-row justify-self-center space-x-2 mt-4">
+  <!-- Imagen sin texto alternativo y decorativa pero relevante -->
+    <section class="flex flex-col justify-center w-full h-2/3 space-x-2 mt-4 md:flex-row   items-center ">
         <div class="flex flex-col">
-            <img src="fotos/macarons.webp" alt="foto de un postre" id="foto1" class="w-52 h-52 rounded-md">
+            <img src="fotos/macarons.webp" alt="foto de un postre" id="foto1" class="w-52  h-52 rounded-md">
             <a href="#" rel="enlace para solicitar informacion adicional" class="font-bold hover:text-slate-800">Leer
                 más</a>
         </div>
-
-        <form class="flex flex-col w-96 h-52 justify-self-center border justify-center rounded-md px-4 space-y-3" id="formulario">
+    <!-- Formulario sin etiquetas, sin agrupación lógica ni descripciones de errores -->
+        <form class="flex flex-col w-96 h-52 justify-self-center border justify-center rounded-md px-4 space-y-3 md:h-full"
+            id="formulario">
             <h1 class="text-2xl text-center">Iniciar sesión</h1>
 
-            <div class="place-self-center">
+            <div class="flex flex-col md:center place-self-center md:flex-row">
                 <label for="nombre">Nombre:</label>
-                <input type="text" name="nombre" placeholder="tu nombre de usuario" class=" border-b-2 border-pink-700 ms-6 w-38 ">
+                <input type="text" name="nombre" placeholder="tu nombre de usuario"
+                    class=" border-b-2 border-pink-700 w-38 md:ms-6">
 
             </div>
-            <div class="place-self-center">
+            <div class="flex flex-col md:center place-self-center md:flex-row">
                 <label for="correo">Correo:</label>
-                <input type="email" name="correo" placeholder="correo@ejemplo.com" class="ms-8 w-38 border-b-2 border-pink-700">
+                <input type="email" name="correo" placeholder="correo@ejemplo.com"
+                    class=" w-38 border-b-2 border-pink-700 md:ms-8">
             </div>
             <div class="place-self-center">
                 <label for="contraseña">Contraseña:</label>
-                <input type="password" name="contraseña" placeholder="Tu contraseña" class="w-38 border-b-2 border-pink-700">
+                <input type="password" name="contraseña" placeholder="Tu contraseña"
+                    class="w-38 border-b-2 border-pink-700">
             </div>
 
 
-            <button class="btn bg-pink-700  text-white self-center  px-2 py-2 rounded-md font-bold hover:bg-pink-800">Registrarse</button>
+            <button
+                class="btn bg-pink-700  text-white self-center  px-2 py-2 rounded-md font-bold hover:bg-pink-800">Registrarse</button>
         </form>
 
     </section>
 
-    <!-- Formulario sin etiquetas, sin agrupación lógica ni descripciones de errores -->
+
     <section class="flex flex-col justify-self-center space-y-2 w-full">
-<!-- Texto con mal contraste de color y tamaño insuficiente -->
+        <!-- Texto con mal contraste de color y tamaño insuficiente -->
         <p class="text-center text-xs">Este texto tiene un contraste bajo y es difícil de leer.</p>
 
         <!-- Elementos interactivos no accesibles para teclado y sin alternativas -->
         <div class="place-self-center mt-2">
             <button onclick="alert('Acción ejecutada');"
-                class="justify-self-center bg-pink-700 py-2 px-2 text-white rounded-md font-bold hover:bg-pink-800">Haga clic
+                class="justify-self-center bg-pink-700 py-2 px-2 text-white rounded-md font-bold hover:bg-pink-800">Haga
+                clic
                 aquí</button>
         </div>
 
         <!-- Contenido animado sin opción de detener o pausar -->
-        <marquee behavior="scroll" direction="left" id="moving" class="font-bold text-3xl italic mt-4 py-8 w-full text-white bg-pink-700">Este
+        <marquee behavior="scroll" direction="left" id="moving"
+            class="font-bold text-3xl italic mt-4 py-8 w-full text-white bg-pink-700">Este
             es un texto en movimiento que no se puede pausar.</marquee>
     </section>
 
-    
+
 
 
 
 
 
     <!-- Multimedia sin subtítulos ni descripción textual -->
-    <h3>Video</h3>
-    <video autoplay>
+  <section class="flex flex-col justify-self-center w-full h-96">
+        <h3 class="text-2xl text-center py-2">Video de muestra</h3>
+    <video controls class="w-72 h-64 self-center">
 
-        <source src="example-video.mp4" type="video/mp4">
+        <source src="videos/videoReduced.mp4" type="video/mp4">
+        <img src="fotos/foto2.jpg" alt="video no soportado">
+        Su navegador no soporta este video
     </video>
+  </section>
 
-    <footer class="w-full absolute bottom">
-        <ul class="flex flex-row place-self-center space-x-8">
+ <!-- Lista visual pero no semántica -->
+    <footer class="flex flex-col w-full h-28 py-6 mt-4 bg-pink-700 text-white">
+        <ul class="flex flex-row place-self-center space-x-8 font-bold">
             <li>Elemento 1</li>
             <li>Elemento 2</li>
             <li>Elemento 3</li>
